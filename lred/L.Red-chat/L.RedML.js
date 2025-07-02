@@ -36,8 +36,6 @@ const chatConfig = {
     unlocked: [   // 不是锁住的关键词回复需要添加在这里确保以下对策代码能够触发    
 
         ["你","谁"],
-        ["cloud","flare","网站"],
-        ["看", "注册", "账号"],
 
         ["病毒","压","解"], // 提供解压病毒样本密码
         ["下载","压","解"],
@@ -126,13 +124,6 @@ const chatConfig = {
     ],
     responses: {
 
-        "cloud,flare,网站":{
-            reply:[
-                `如果你想将自己修改好的网站上传到 Cloudflare Pages，可以按照以下步骤操作：</p><hr data-start="23" data-end="26" class="" style=""> <p data-start="28" data-end="73" class=""> <ol data-start="75" data-end="360"> <li data-start="75" data-end="140" class="" style=""> <p data-start="78" data-end="140" class=""><strong data-start="78" data-end="100">在 GitHub 上创建一个新的仓库</strong>，并将你的网站文件上传到这个仓库中。请确保你的网站主页面是一个 HTML 文件。</p> </li> <li data-start="142" data-end="243" class="" style=""> <p data-start="145" data-end="243" class=""><strong data-start="145" data-end="178">将主页面的 HTML 文件命名为 <code data-start="164" data-end="176">index.html</code></strong>。这是非常关键的一步，因为 Cloudflare Pages 默认会从项目的根目录加载 <code data-start="222" data-end="234">index.html</code> 作为网站的首页。</p> </li> <li data-start="245" data-end="360" class="" style=""> <p data-start="248" data-end="360" class=""><strong data-start="248" data-end="286">在 Cloudflare Pages 中连接你的 GitHub 仓库</strong>，并部署这个项目。只要确保有一个正确命名的 <code data-start="308" data-end="320">index.html</code> 文件，你的网站就可以被正确访问并在 Cloudflare Pages 上显示。</p> </li> </ol>`,
-                `<h3 data-start="25" data-end="61" class="">如何将网站上传到 Cloudflare Pages 并正确显示：</h3> <hr data-start="20" data-end="23" class=""> <ol data-start="63" data-end="352"> <li data-start="63" data-end="99" class=""> <p data-start="66" data-end="99" class=""><strong data-start="66" data-end="86">在 GitHub 创建一个新仓库</strong>，把你的网站文件上传进去。</p> </li> <li data-start="101" data-end="209" class=""> <p data-start="104" data-end="209" class=""><strong data-start="104" data-end="131">确保首页的文件命名为 <code data-start="117" data-end="129">index.html</code></strong><br data-start="131" data-end="134"> 这是关键，Cloudflare Pages 会默认寻找根目录下的 <code data-start="170" data-end="182">index.html</code> 作为网站首页。如果不是这个名字，网站将无法正常访问。</p> </li> <li data-start="211" data-end="298" class=""> <p data-start="214" data-end="298" class=""><strong data-start="214" data-end="251">登录 Cloudflare，进入 Cloudflare Pages</strong>，点击“创建项目（Create a project）”，连接你刚刚创建的 GitHub 仓库。</p> </li> <li data-start="300" data-end="352" class=""> <p data-start="303" data-end="352" class=""><strong data-start="303" data-end="315">按照提示完成部署</strong>。几分钟后，你的网站就会通过一个 Cloudflare 提供的链接访问了。</p> </li> </ol> <hr data-start="354" data-end="357" class="">`
-
-            ]
-        },
 
                 "你,谁":{
             reply: [
@@ -142,91 +133,7 @@ const chatConfig = {
             ]
         },
 
-        "看,注册,账号": {
-            reply: [
-                `
-                <p style="color: #e1e1e1e2;">你可以使用KALI LINUX 执行以下操作 并 查看 该 账号注册的平台有哪些，主意了 有些平台有相对强的防御技术，所以可能查不到一些注册过的平台</p>
-<h2 style="color: #e1e1e1e2;">Holehe 安装与使用教程（仅供学习）</h2>
 
-<p style="color: #e1e1e1e2;">在本教程中，我们将演示如何在 Kali Linux 中使用 <code>holehe</code> 工具来查询与特定 Gmail 地址相关的注册网站。</p>
-
-<h3 style="color: #e1e1e1e2;">1. 克隆 Holehe 仓库：</h3>
-<p style="color: #e1e1e1e2;">首先，通过 git 克隆 Holehe 仓库：</p>
-<pre><code style="background-color: #2e2e2e; color: #ffffff; display: block; padding: 10px; border-radius: 6px;">
-┌──(root㉿kali)-[~]
-└─# git clone https://github.com/megadose/holehe.git
-</code></pre>
-<p style="color: #e1e1e1e2;">这条命令将 Holehe 工具的源代码从 GitHub 克隆到本地。你需要安装 git 才能运行此命令。</p>
-
-<h3 style="color: #e1e1e1e2;">2. 进入 Holehe 目录：</h3>
-<p style="color: #e1e1e1e2;">然后，进入 Holehe 的目录：</p>
-<pre><code style="background-color: #2e2e2e; color: #ffffff; display: block; padding: 10px; border-radius: 6px;">
-┌──(root㉿kali)-[~]
-└─# cd holehe/
-</code></pre>
-<p style="color: #e1e1e1e2;">此命令将当前目录切换到 "holehe" 文件夹，之后你可以在该文件夹中执行相关命令。</p>
-
-<h3 style="color: #e1e1e1e2;">3. 安装依赖：</h3>
-<p style="color: #e1e1e1e2;">接下来，安装必要的依赖项，如 Python setuptools：</p>
-<pre><code style="background-color: #2e2e2e; color: #ffffff; display: block; padding: 10px; border-radius: 6px;">
-┌──(root㉿kali)-[~/holehe]
-└─# sudo apt install python3-setuptools
-</code></pre>
-<p style="color: #e1e1e1e2;">此命令将安装 Python3 的 setuptools 包，它是用来管理和分发 Python 软件包的工具， Holehe 依赖此工具。</p>
-
-<h3 style="color: #e1e1e1e2;">4. 安装 Holehe：</h3>
-<p style="color: #e1e1e1e2;">然后，使用 pip 安装 Holehe：</p>
-<pre><code style="background-color: #2e2e2e; color: #ffffff; display: block; padding: 10px; border-radius: 6px;">
-┌──(root㉿kali)-[~/holehe]
-└─# pip install holehe
-</code></pre>
-<p style="color: #e1e1e1e2;">该命令会通过 pip 安装 Holehe 工具，它是一个 Python 库，能够帮助你检查与某个邮箱关联的社交媒体网站。</p>
-
-<h3 style="color: #e1e1e1e2;">5. 冲突修复安装：</h3>
-<p style="color: #e1e1e1e2;">如果你遇到问题，可以使用以下命令来修复安装过程中的一些冲突：</p>
-<pre><code style="background-color: #2e2e2e; color: #ffffff; display: block; padding: 10px; border-radius: 6px;">
-┌──(root㉿kali)-[~/holehe]
-└─# pip install holehe --break-system-packages
-</code></pre>
-<p style="color: #e1e1e1e2;">该命令通过跳过系统包的限制，确保 Holehe 能正确安装，尤其在遇到权限或依赖冲突时使用。</p>
-
-<h3 style="color: #e1e1e1e2;">6. 运行 Holehe 查询：</h3>
-<p style="color: #e1e1e1e2;">安装完成后，你可以运行 Holehe 来查询邮箱的注册信息。以 Gmail 为例，输入以下命令：</p>
-<pre><code style="background-color: #2e2e2e; color: #ffffff; display: block; padding: 10px; border-radius: 6px;">
-┌──(root㉿kali)-[~/holehe]
-└─# holehe example@gmail.com
-</code></pre>
-<p style="color: #e1e1e1e2;">在这里，"example@gmail.com" 是你想查询的邮箱地址。Holehe 会列出该邮箱地址可能与之关联的注册网站。</p>
-
-<h3 style="color: #e1e1e1e2;">7. 查看查询结果：</h3>
-<p style="color: #e1e1e1e2;">查询完成后，Holehe 会列出该邮箱地址在多个网站上的注册情况，如下所示：</p>
-<pre><code style="background-color: #2e2e2e; color: #ffffff; display: block; padding: 10px; border-radius: 6px;">
-********************
-   example@gmail.com
-********************
-[x] about.me
-[x] adobe.com
-[+] amazon.com
-[x] amocrm.com
-[+] any.do
-[+] archive.org
-[-] armurerie-auxerre.com
-[x] atlassian.com
-...
-[+] zoho.com
-</code></pre>
-<p style="color: #e1e1e1e2;">在输出中：</p>
-<ul style="color: #e1e1e1e2;">
-    <li><span style="color: #00ff00;">[+]</span> 表示该邮箱地址已注册该网站。</li>
-    <li><span style="color: #ff0000;">[-]</span> 表示该邮箱地址未注册该网站。</li>
-    <li><span style="color: #ffffff;">[x]</span> 表示该网站由于速率限制未返回数据。</li>
-</ul>
-
-<p style="color: #e1e1e1e2;">查询结束后，Holehe 会显示检查了多少个网站，以及执行的时间。</p>
-`
-            ],
-            lockAfterUse: false 
-        },
 
         "病毒,压,解": {
             reply: [
