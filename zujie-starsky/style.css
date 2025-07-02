@@ -1,0 +1,223 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+        body {
+            min-height: 100vh;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #2c2c2c;
+            position: relative;
+            overflow-x: auto;
+            background-image: url(https://i.ibb.co/9mj4ryPH/20190815113419267.jpg);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+/*滚动条隐藏*/
+        /*滚动条*/
+
+        /* WebKit 内核浏览器（Chrome、Edge、Safari） */
+        ::-webkit-scrollbar {
+            width: 30px; /* 纵向滚动条宽度 */
+            height: 10px; /* 横向滚动条高度 */
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: linear-gradient(180deg, #2727279e, #3030309b); /* 渐变轨道背景 */
+            border-radius: 10px;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(180deg, #2d2d2dc7, #353535b8); /* 滑块渐变色 */
+            border-radius: 10px;
+            border: 2px solid #a1a1a13d; /* 半透明边框 */
+            transition: background 0.3s ease-in-out;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(180deg, #1d1d1dda, #121212c2); /* 悬停时的颜色变化 */
+        }
+
+
+
+
+        /* 全屏内容区域 */
+        .content-section {
+            position: fixed;
+            width: 100vw;
+            height: 100vh;
+            padding: 40px;
+            opacity: 0;
+            transform: translateX(100%);
+            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            overflow-y: auto;
+            background: rgba(19, 19, 19, 0.467);
+        }
+
+        .content-section.active {
+            opacity: 1;
+            transform: translateX(0);
+            z-index: 1;
+        }
+
+        #homeContent {
+            background: linear-gradient(135deg, #00000070 0%, #12121274 100%);
+            z-index: 2;
+        }
+
+        /* 控制面板 */
+        .control-panel {
+            position: fixed;
+            right: 30px;
+            top: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            z-index: 1000;
+            align-items: flex-end;
+        }
+
+        /* 按钮通用样式 */
+        .nav-btn {
+            padding: 10px 15px;
+            border-color: #676767;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            transform-origin: right center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }   
+
+        /* 主菜单按钮 */
+        #menuBtn {
+            background: rgba(42, 42, 42, 0.326);
+            color: rgb(188, 188, 188);
+            backdrop-filter: blur(1px);
+        }
+
+        /* 功能按钮动画 */
+        .func-btn {
+            background: rgba(29, 29, 29, 0.456);
+            color: #a5a5a5;
+            opacity: 0;
+            transform: translateX(30px);
+            visibility: hidden;
+            width: 150px;
+        }
+
+        .func-btn.show {
+            opacity: 1;
+            transform: translateX(0);
+            visibility: visible;
+        }
+
+        /* 返回按钮特殊样式 */
+        #backBtn {
+            background: rgba(26, 26, 26, 0.64);
+            color: #ababab;
+            margin-top: 20px;
+            opacity: 0;
+            transform: translateY(-20px);
+            transition: all 0.3s 0.1s;
+            visibility: hidden; /* 默认隐藏 */
+        }
+
+        #backBtn.show {
+            opacity: 1;
+            transform: translateY(0);
+            visibility: visible;
+        }
+
+        /* 内容排版 */
+        .content-title {
+            font-size: 3rem;
+            margin-bottom: 2rem;
+            color: #1a1a1a;
+            animation: fadeInUp 0.6s ease;
+        }
+
+        .content-text {
+            max-width: 800px;
+            line-height: 1.8;
+            color: #444;
+            font-size: 1.1rem;
+            animation: fadeIn 0.6s 0.2s ease both;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+
+        /*iframe内容css代码*/
+
+        /* 遮罩层（半透明背景） */
+        .huoshistarxk-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* 半透明背景 */
+            z-index: 1001;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        /* iframe 容器，初始状态缩小 */
+        .huoshistarxk-iframe-container {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            height: 100%;
+            transform: translate(-50%, -50%) scale(0.8);
+            transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+            opacity: 0;
+        }
+
+        /* iframe */
+        .huoshistarxk-iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 10px;
+            z-index: 1001;
+        }
+
+        /* 关闭按钮 */
+        .huoshistarxk-close-button {
+            position: absolute;
+            top: 20px;
+            right: 70px;
+            font-size: 34px;
+            color: rgb(166, 166, 166);
+            cursor: pointer;
+            z-index: 1002;
+        }
+
+        /* 显示 iframe 时的动画 */
+        .huoshistarxk-overlay.active {
+            display: block;
+            opacity: 1;
+        }
+
+        .huoshistarxk-iframe-container.active {
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(1);
+        }

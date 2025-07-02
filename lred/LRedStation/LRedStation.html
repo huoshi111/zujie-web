@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L.RED STATION</title>
+    <link rel="stylesheet" type="text/css" href="LRedStation00.css">
+</head>
+<body>
+    <!-- 菜单按钮 -->
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    
+    <!-- 修复：添加 id="navbar" -->
+    <div class="navbar" id="navbar">
+        <a onclick="showContent('war'); toggleMenu()">战争 WAR</a>
+        <a onclick="showContent('executed'); toggleMenu()">处决 Executed</a>
+        <a onclick="showContent('crime'); toggleMenu()">极端 Crime</a>
+        <a onclick="showContent('horror'); toggleMenu()">恐怖 HORROR</a>
+    </div>
+<!--******************************************************************************************************-->
+            <section id="war" class="content active">
+
+                <h3 style="color: rgba(197, 13, 13, 0.81);">战争 WAR</h3>
+
+                <p> 您正在访问LRED 最 恐怖与残暴 的黑暗站点 LRED STATION </p>
+                <p> 必须满 18 周岁 才可以观看以下内容，如有心里不适，请立即退出站点。</p>
+                <br><br><br>
+<center>
+
+                  <video id="myVideo" controls controlsList="nodownload noremoteplayback">
+                        <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4">
+                           Failed ERROR
+                  </video>
+</center>
+            </section>
+
+<!--******************************************************************************************************-->
+            <section id="executed" class="content active">
+
+                <h3 style="color: rgba(197, 13, 13, 0.81);">处决 Executed</h3>
+                
+
+            </section>
+
+<!--******************************************************************************************************-->
+
+            <section id="crime" class="content active">
+
+                <h3 style="color: rgba(197, 13, 13, 0.81);">极端 Crime</h3>
+                
+
+            </section>
+
+<!--******************************************************************************************************-->
+            
+
+            <section id="horror" class="content active">
+
+                <h3 style="color: rgba(197, 13, 13, 0.81);">恐怖 HORROR</h3>
+
+            </section>
+
+<!--******************************************************************************************************-->
+
+    <script src="LRedStation00.js"></script>
+</body>
+</html>

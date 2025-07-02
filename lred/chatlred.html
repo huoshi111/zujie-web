@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>号码 <?= htmlspecialchars($uid) ?> 的私信区</title>
+    <style>
+        body {
+            background-color: #0a0a0a;
+            color: #ff0202f5;
+            font-family: 'Courier New', monospace;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h2, h3 {
+            text-align: center;
+            color: #b41212e6;
+        }
+
+        .chat-box {
+            border: 2px solid #444;
+            padding: 15px;
+            width: 90%;
+            max-width: 600px;
+            height: 300px;
+            margin: 0 auto 20px;
+            overflow-y: auto;
+            background: #111;
+            color: #07d82d;
+            box-shadow: 0 0 10px #ff000060;
+            border-radius: 8px;
+        }
+
+    .textcont {
+        background-color: #1a1a1a;
+        color: #e6e6e6;
+        border: 1px solid #b41212e6;
+        border-radius: 5px;
+        width: 90%;
+        max-width: 600px;
+        padding: 10px;
+        font-family: 'Courier New', monospace;
+        resize: vertical;
+        transition: border 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    select {
+        background-color: #1a1a1a;
+        color: #b41212e6;
+        border: 1px solid #c10000;
+        padding: 5px;
+        border-radius: 4px;
+        font-family: 'Courier New', monospace;
+        transition: border 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .textcont:focus,
+    select:focus {
+        outline: none;
+        border-color: #b41212e6;
+        box-shadow: 0 0 6px #b41212e6;
+    }
+
+        .btn {
+            background-color: #1a1a1a;
+            color: #b41212e6;
+            border: 2px solid #c10000;
+            border-radius: 6px;
+            padding: 8px 16px;
+            font-weight: bold;
+            cursor: pointer;
+            text-shadow: 0 0 3px #b41212e6;
+            box-shadow: 0 0 5px #ff000033;
+            transition: 0.4s ease;
+        }
+
+        .btn:hover {
+            background-color: #000;
+            color: #b41212e6;
+            box-shadow: 0 0 10px #ff0000aa;
+        }
+
+
+        form {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .exit-link {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        a.btn {
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <h2>入口号：<?= htmlspecialchars($uid) ?></h2>
+
+    <div class="chat-box">
+        <pre><?= htmlspecialchars($messages) ?></pre>
+    </div>
+
+    <h3>发送私信</h3>
+    <form method="POST">
+        <textarea class="textcont" name="message" rows="4" required></textarea><br><br>
+        <label>私信 CHAT - </label>
+        <select name="role"> 
+            <option value="user">USER</option>
+            <option value="admin">LRED</option>
+        </select>
+        <br><br>
+        <button class="btn" type="submit">➤ 发送</button>
+    </form>
+
+    <div class="exit-link">
+        <a class="btn" href="index.php">← 退出</a>
+    </div>
+</body>
+</html>

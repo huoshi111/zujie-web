@@ -1,0 +1,223 @@
+
+.search_pane_input{
+	overflow: hidden; 
+	width:618px; 
+	padding: 0px;
+}
+.tea{
+	width: 618px; 
+	display: block;
+	font-size: 14px;
+}
+.ico_camera{
+	position: absolute;
+	right: 10px;
+}
+/*.rect_warp{
+	background-color: red;
+}*/
+
+.tb_nav_hd li{
+	display: inline;
+}
+.tb_nav_bd li{
+	display: inline;
+}
+.prome_nav{
+	overflow: hidden;
+}
+.prome_nav{
+	overflow: hidden;
+	border-radius: 6px 4px 4px 6px;
+}
+.point{
+	display: inline;
+	margin-right: 3px;
+	border-radius: 2px;
+}
+.right_extra{
+	margin-left: -5px;
+}
+.extra_head li{
+	overflow: hidden;
+}
+.notice{
+	overflow: hidden;
+}
+.fixie{
+	display: inline;
+}
+.ico_login_button{
+	background-position: 0 -161px;
+}
+.phone_bill, .tb_frontpage, .ali_app{
+	width: 295px;
+}
+.phone_bill .bill_charge{
+	width: 117px;
+}
+.phone_bill li{
+	width: 58px;
+}
+.more span{
+	vertical-align: top;
+}
+.ali_apps li{
+	margin-left: 3px;
+	display: inline;
+}
+.story_content{
+	width: 267px;
+	border-top: 1px solid #EEEEEE;
+	margin-top: -1px;
+}
+.box_shu{
+	overflow: hidden;
+}
+.discover{
+	overflow: hidden;
+}
+.hot_point{
+	overflow: hidden;
+	bottom: -20px;
+}
+.img_bg_text, .goods_hd{
+	overflow: hidden;
+	/*text-indent: 1px;*/
+}
+.discover_goods{
+	overflow: hidden;
+}
+.item_disc h4{
+	overflow: hidden;
+}
+.change_goods{
+	height: 25px;
+	padding-top: 10px;
+}
+.discover{
+	width: 266px;
+}
+.tanx_wraper{
+	bottom: -10px;
+}
+.hot_point_part8 .part2_hd{
+	overflow: hidden;
+}
+.part8_pics{
+	width: 370px;
+}
+.part3_bannars_left{
+  	display: inline;
+  	margin-right: 20px;
+  	overflow: hidden;
+  	zoom: 1;
+}
+.part3_bannars_left img{
+	margin-right: 5px;
+}
+.part3_bannars_left p{
+  	overflow: hidden;
+  	margin-top: 3px;
+}
+.part3_outdoor{
+	overflow: hidden;
+	margin-left: -1px;
+}
+.part5_bannars_left{
+	overflow: hidden;
+	display: inline;
+}
+.part5_img_right .part5_img span{
+	overflow: hidden;
+	top: 55px;
+}
+.hot_point_part12{
+	margin-top: 10px;
+}
+.part12_content{
+	overflow: hidden;
+}
+.part12_pics{
+	overflow: hidden;
+}
+.part12_hd li{
+	display: inline;
+}
+.family_content_text{
+	width: 190px;
+	overflow: hidden;
+	display: inline-block;
+}
+.family_content_pics{
+	width: 350px;
+	overflow: hidden;
+	display: inline-block;
+}
+.part8_pic1{
+	overflow: hidden;
+	margin-right: 3px;
+}
+.part8_pic1 span{
+	width: 119px;
+	display: inline-block;
+}
+.part8_pic1 strong{
+	width: 52px;
+}
+.family_pics_top a{
+	margin-top: 20px;
+	height: 40px;
+}
+.channel_item{
+	padding: 14px 10px;
+}
+.channel_hd h3{
+	display: inline;
+}
+.extre_pics{
+	overflow: hidden;
+}
+.content_bottom_channel{
+	width: 1200px;
+}
+.channel_hd2 h3{
+	display: inline-block;
+}
+.channel_hd2 span{
+	display: inline-block;
+}
+.channel_hd3 h3{
+	display: inline;
+}
+.guang_right{
+	overflow: hidden;
+}
+.guang_pic1 p{
+	left: 10px;
+}
+.right_pic2 li{
+	display: inline;
+	overflow: hidden;
+}
+.right_pic2{
+	width: 150px;
+}
+.right_sales_text{
+	overflow: hidden;
+}
+.sales_hd{
+	overflow: hidden;
+}
+.hot_pic_items{
+	display: inline-block;
+}
+.bottom_part2{
+	display: inline;
+	/*width: 103px;*/
+	/*margin-right: 5px;*/
+}
+.refund li{
+	display: inline;
+	margin-right: 20px;
+}

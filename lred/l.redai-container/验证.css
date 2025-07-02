@@ -1,0 +1,57 @@
+
+        
+        /* 验证窗口样式 */
+        .verification-container {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(22, 22, 22, 0.597);
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            text-align: center;
+            width: 300px;
+        }
+        
+        .verification-input {
+            padding: 10px;
+            width: 80%;
+            margin: 10px 0;
+            border: 1px solid #8f8f8fcc;
+            border-radius: 4px;
+        }
+        
+        .verification-button {
+            padding: 8px 16px;
+            background-color: #2196F3;
+            color: rgb(203, 203, 203);
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        
+        .verification-button:hover {
+            background-color: #0b7dda;
+        }
+        
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+        
+        .message {
+            margin-top: 10px;
+            color: #ff0000;
+            font-size: 14px;
+        }
